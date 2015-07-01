@@ -1,0 +1,2 @@
+defmodule Magics do
+end

@@ -1,0 +1,4 @@
+Magics
+======
+
+** TODO: Add description **
