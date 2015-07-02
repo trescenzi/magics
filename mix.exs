@@ -14,7 +14,7 @@ defmodule Magics.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :ibrowse]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +27,10 @@ defmodule Magics.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [{:tesla, "~> 0.1.0"},
+     {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.1"}, # default adapter
+     {:exjsx, "~> 3.1.0"}, # for JSON middleware
+     {:floki, "~> 0.3"} # for parsing and quering HTML
+    ]
   end
 end
